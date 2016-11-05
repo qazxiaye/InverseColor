@@ -5,8 +5,10 @@ Usage: two possibilities
  1. change the value of static variable "path" in source code as the given directory mentioned above, then run it anywhere.
  2. set the value of static variable "path" as *System.getProperty("user.dir")*. Export runnable jar (which can be found in this respectory, ReverseColor.jar) and move this file to the desired directory containing images, then run. Note: There'll be exceptions launching directly in IDE in this case, due to other file types under the working directory.
 
+<br><br>
+<br><br>
 
- 这是一个将文件夹下所有图片颜色反转的小工具。可以设置具体路径指定文件夹，也可设置为科执行文件的当前工作路径。反色图片生成在路径下的新文件夹“gen”中，生成图片与原文件同名。
+这是一个将文件夹下所有图片颜色反转的小工具。可以设置具体路径指定文件夹，也可设置为科执行文件的当前工作路径。反色图片生成在路径下的新文件夹“gen”中，生成图片与原文件同名。
 
 使用：
  
