@@ -1,4 +1,4 @@
-This tool reverses colors of all images which are under working directory of the executable or under a directory given in the source. There should be no other file types under the directory. Generated files will be found in folder "gen" which will be under the directory mentioned above. Generated files' name will be the same as original images.
+This tool reverses colors of all images which are under working directory of the executable or under a directory given in the source. There should be no other file types under the directory. Generated files will be found in folder "gen" which will be under the aforementioned directory. Generated files' name will be the same as original images.
 
 Usage: two possibilities
 
