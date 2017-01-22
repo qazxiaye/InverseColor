@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+jar {
+    manifest { 
+        attributes('Main-Class': 'ReverseColor') 
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ["src"]
+        }
+    }
+}
