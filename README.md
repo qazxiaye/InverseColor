@@ -12,7 +12,7 @@ Usage:
 
 Run:
 
- - maven
+ - **maven**
 
  1. mvn package
 
@@ -20,7 +20,7 @@ Run:
 
  or
 
- - gradle
+ - **gradle**
 
  1. gradle jar
 
