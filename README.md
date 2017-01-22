@@ -6,6 +6,11 @@ Usage:
 
  - otherwise, all images in parameters will be source image to be reversed.
 
+Run:
+
+ 1. mvn package
+
+ 2. java -jar target/ReverseColor-1.0.0.jar [optional: image files]
 
 <br>
  - original image
