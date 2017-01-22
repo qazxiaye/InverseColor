@@ -13,13 +13,17 @@ Usage:
 Run:
 
  - maven
+
  1. mvn package
+
  2. java -jar target/ReverseColor-1.0.0.jar [optional: image files]
 
  or
 
  - gradle
+
  1. gradle jar
+
  2. java -jar build/libs/ReverseColor.jar [optional: image files]
 
 <br>
