@@ -12,14 +12,12 @@ import java.util.List;
 
 import javax.imageio.ImageIO;
 
-class ReverseColor
+class InverseColor
 {
 	static final String currDir = System.getProperty("user.dir");
 	static final int threadNb   = Runtime.getRuntime().availableProcessors();
 	
 	static List<File> img_list  = new ArrayList<File>();
-	static int currImgIdx = 0;
-	static final Semaphore sem = new Semaphore(1);
 	
 	public static void main(String args[])
 	{
@@ -61,15 +59,18 @@ class ReverseColor
 			}
 		}
 		
-		//reverse images
+		//inverse images
 		for(int i=0; i<threadNb; i++)
 		{
-			new Reverser().start();
+			new Inverser().start();
 		}
 	}
 	
-	static class Reverser extends Thread
+	static class Inverser extends Thread
 	{
+		static int currImgIdx = 0;
+		static final Semaphore sem = new Semaphore(1);
+		
 		public void run()
 		{
 			while(true)
@@ -87,11 +88,11 @@ class ReverseColor
 				
 				sem.Release();
 				
-				ReverseImg(img);
+				InverseImg(img);
 			}
 		}
 		
-		void ReverseImg(File file)
+		void InverseImg(File file)
 		{
 			BufferedImage image = null;
 			try
@@ -130,7 +131,7 @@ class ReverseColor
 				e.printStackTrace();
 			}
 			
-			System.out.println(file.getName() + " Reversed!");
+			System.out.println(file.getName() + " inversed.");
 		}
 	}
 }
