@@ -17,7 +17,7 @@ class InverseColor
 	static final String currDir = System.getProperty("user.dir");
 	static final int threadNb   = Runtime.getRuntime().availableProcessors();
 	
-	static List<File> img_list  = new ArrayList<File>();
+	static final List<File> img_list  = new ArrayList<File>();
 	
 	public static void main(String args[])
 	{
@@ -29,29 +29,29 @@ class InverseColor
 		}
 		
 		//get images
-		File[] listOfFiles;
+		File[] files;
 		if(args.length == 0)
 		{
 			File folder = new File(currDir);
-			listOfFiles = folder.listFiles();
+			files = folder.listFiles();
 		}
 		else
 		{
-			listOfFiles = new File[args.length];
+			files = new File[args.length];
 			for(int i=0; i<args.length; i++)
 			{
-				listOfFiles[i] = new File(args[i]);
+				files[i] = new File(args[i]);
 			}
 		}
 		
-		for(File img : listOfFiles)
+		for(File f : files)
 		{
 			try
 			{
-				String mimetype = Files.probeContentType(img.toPath());
+				String mimetype = Files.probeContentType(f.toPath());
 				
 				if(mimetype != null && mimetype.split("/")[0].equals("image"))
-					img_list.add(img);
+					img_list.add(f);
 			} 
 			catch(IOException e)
 			{
