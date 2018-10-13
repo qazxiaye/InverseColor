@@ -62,17 +62,17 @@ class InverseColor {
         @Override
         public void run() {
             while (true) {
-                sem.Require();
+                sem.aquire();
 
                 if (currImgIdx == img_list.size()) {
-                    sem.Release();
+                    sem.release();
                     return;
                 }
 
                 File img = img_list.get(currImgIdx);
                 currImgIdx++;
 
-                sem.Release();
+                sem.release();
 
                 InverseImg(img);
             }

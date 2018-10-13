@@ -5,7 +5,7 @@ public class Semaphore {
         count = init;
     }
 
-    public synchronized void Require() {
+    public synchronized void aquire() {
         if (--count < 0) {
             try {
                 wait();
@@ -15,7 +15,7 @@ public class Semaphore {
         }
     }
 
-    public synchronized void Release() {
+    public synchronized void release() {
         if (++count <= 0) {
             notify();
         }
